@@ -1,0 +1,6 @@
+rootProject.name = 'java-spring'
+
+include(
+        "rest-api"
+)
+

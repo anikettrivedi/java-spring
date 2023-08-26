@@ -4,6 +4,6 @@ include(
         "rest-api",
         "rest-api-consumer",
         "scheduling",
-        "spring-core-xml"
+        "spring-core"
 )
 

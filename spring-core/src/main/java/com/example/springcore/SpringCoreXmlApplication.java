@@ -1,7 +1,6 @@
-package com.example.springcorexml;
+package com.example.springcore;
 
-import com.example.springcorexml.service.PetStoreService;
-import org.springframework.beans.factory.BeanFactory;
+import com.example.springcore.service.PetStoreService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -12,12 +11,15 @@ public class SpringCoreXmlApplication {
     public static void main(String[] args) {
 
         ApplicationContext context = new ClassPathXmlApplicationContext(
-                "services.xml", "daos.xml"
+                "services.xml",
+                "daos.xml"
         );
 
         PetStoreService service = context.getBean("petStore", PetStoreService.class);
 
         System.out.printf("%n%n------ starting SpringCoreXmlApplication ------%n%n");
+
+        System.out.printf("%n%n------ basic spring IOC beans demo using XML bean definitions (dependency injection) ------%n%n");
         service.printClassName();
         service.printDependenciesClassNames();
 
@@ -27,13 +29,13 @@ public class SpringCoreXmlApplication {
         System.out.printf("%n%n------ bean details ------%n%n");
         Arrays.asList(context.getBeanDefinitionNames()).forEach(
             beanName -> {
+                System.out.printf("%-30s%s%s%n", "beanName", " = ", beanName);
                 System.out.printf("%-30s%s%s%n", "beanType", " = ", context.getType(beanName));
                 System.out.printf("%-30s%s%s%n", "aliases", " = ", Arrays.stream(context.getAliases(beanName)).toList());
                 System.out.printf("%-30s%s%s%n", "isSingleton", " = ", context.isSingleton(beanName));
                 System.out.printf("%n");
             }
         );
-
 
     }
 

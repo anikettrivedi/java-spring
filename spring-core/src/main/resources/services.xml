@@ -5,14 +5,15 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!-- services -->
-
-    <bean id="petStore" class="com.example.springcorexml.service.PetStoreServiceServiceImpl">
+    <bean id="petStore" class="com.example.springcore.service.PetStoreServiceServiceImpl">
         <property name="accountDao" ref="accountDao"/>
         <property name="itemDao" ref="itemDao"/>
-        <!-- additional collaborators and configuration for this bean go here -->
+    </bean>
+
+    <bean id="petStoreAutowired" class="com.example.springcore.service.PetStoreServiceServiceImpl" autowire="byName">
+        <property name="accountDao" ref="accountDao"/>
+        <property name="itemDao" ref="itemDao"/>
     </bean>
 
     <alias name="petStore" alias="petStoreAlias"/>
-
 </beans>

@@ -1,0 +1,49 @@
+package com.example.springcore;
+
+import com.example.springcore.methodinjection.CommandManager;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import java.util.Arrays;
+
+/*
+    - this example illustrates method injection
+    - this example also illustrates prototype beans
+    - https://docs.spring.io/spring-framework/docs/5.2.25.RELEASE/spring-framework-reference/core.html#beans-factory-autowire-candidate
+*/
+public class SpringCoreXmlMethodInjectionApplication {
+
+    public static void main(String[] args) {
+
+        ApplicationContext context = new ClassPathXmlApplicationContext(
+                "methodinjection.xml"
+        );
+
+        System.out.printf("%n%n------ starting SpringCoreXmlMethodInjectionApplication ------%n%n");
+
+        System.out.printf("%n%n------ method injection demo using XML bean definitions ------%n%n");
+
+        // command manager is singleton but each command it creates is prototype
+        CommandManager commandManager = context.getBean("commandManager", CommandManager.class);
+
+        System.out.printf("%-30s%s%s%n", "command", " = ", commandManager.createCommand());
+        System.out.printf("%-30s%s%s%n", "command", " = ", commandManager.createCommand());
+        System.out.printf("%-30s%s%s%n", "command", " = ", commandManager.createCommand());
+
+        System.out.printf("%n%n------ bean definition names ------%n%n");
+        Arrays.asList(context.getBeanDefinitionNames()).forEach(System.out::println);
+
+        System.out.printf("%n%n------ bean details ------%n%n");
+        Arrays.asList(context.getBeanDefinitionNames()).forEach(
+            beanName -> {
+                System.out.printf("%-30s%s%s%n", "beanName", " = ", beanName);
+                System.out.printf("%-30s%s%s%n", "beanType", " = ", context.getType(beanName));
+                System.out.printf("%-30s%s%s%n", "aliases", " = ", Arrays.stream(context.getAliases(beanName)).toList());
+                System.out.printf("%-30s%s%s%n", "isSingleton", " = ", context.isSingleton(beanName));
+                System.out.printf("%n");
+            }
+        );
+
+    }
+
+}

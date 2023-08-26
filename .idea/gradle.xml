@@ -11,14 +11,7 @@
             <option value="$PROJECT_DIR$/rest-api" />
             <option value="$PROJECT_DIR$/rest-api-consumer" />
             <option value="$PROJECT_DIR$/scheduling" />
-          </set>
-        </option>
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="externalProjectPath" value="$PROJECT_DIR$/rest-api" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$/rest-api" />
+            <option value="$PROJECT_DIR$/spring-core-xml" />
           </set>
         </option>
       </GradleProjectSettings>

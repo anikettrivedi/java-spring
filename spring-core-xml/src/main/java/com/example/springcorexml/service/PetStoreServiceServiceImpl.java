@@ -20,10 +20,12 @@ public class PetStoreServiceServiceImpl implements PetStoreService {
     }
 
     public void setAccountDao(AccountDao accountDao) {
+        System.out.printf("%-50s%s%n", "setter function invoked in ", PetStoreServiceServiceImpl.class.getName());
         this.accountDao = accountDao;
     }
 
     public void setItemDao(ItemDao itemDao) {
+        System.out.printf("%-50s%s%n", "setter function invoked in ", PetStoreServiceServiceImpl.class.getName());
         this.itemDao = itemDao;
     }
 }

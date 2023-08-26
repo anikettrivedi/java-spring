@@ -5,13 +5,12 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="accountDao"
-          class="com.example.springcorexml.dao.JpaAccountDao2">
-        <!-- additional collaborators and configuration for this bean go here -->
+    <bean id="accountDao" class="com.example.springcorexml.dao.JpaAccountDao">
+        <constructor-arg type="int" value="1"/>
     </bean>
 
     <bean id="itemDao" class="com.example.springcorexml.dao.JpaItemDao">
-        <!-- additional collaborators and configuration for this bean go here -->
+        <constructor-arg type="int" value="2"/>
     </bean>
 
     <!-- more bean definitions for data access objects go here -->

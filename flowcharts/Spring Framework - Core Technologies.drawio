@@ -1,0 +1,85 @@
+<mxfile host="app.diagrams.net" modified="2023-08-26T05:46:03.955Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/116.0" etag="uzGbvYD9Yb5zuKfHlfvv" version="21.6.9" type="device">
+  <diagram name="Page-1" id="2c0d36ab-eaac-3732-788b-9136903baeff">
+    <mxGraphModel dx="3805.5" dy="1316" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1.5" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="KD-GGYxjvqdxob9nk7W1-125" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="KD-GGYxjvqdxob9nk7W1-123" target="KD-GGYxjvqdxob9nk7W1-126">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="280" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KD-GGYxjvqdxob9nk7W1-123" value="&lt;div&gt;&lt;font style=&quot;font-size: 21px;&quot;&gt;&lt;b&gt;Spring Framework - Core Technologies&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="633" y="40" width="488" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="KD-GGYxjvqdxob9nk7W1-141" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="KD-GGYxjvqdxob9nk7W1-126" target="KD-GGYxjvqdxob9nk7W1-130">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KD-GGYxjvqdxob9nk7W1-126" value="&lt;b&gt;&lt;font style=&quot;font-size: 21px;&quot;&gt;IoC Container&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="170" width="260" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="KD-GGYxjvqdxob9nk7W1-130" value="&lt;b&gt;&lt;font style=&quot;font-size: 21px;&quot;&gt;BeanFactory&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="280" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KD-GGYxjvqdxob9nk7W1-146" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="KD-GGYxjvqdxob9nk7W1-132" target="KD-GGYxjvqdxob9nk7W1-136">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KD-GGYxjvqdxob9nk7W1-147" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="KD-GGYxjvqdxob9nk7W1-132" target="KD-GGYxjvqdxob9nk7W1-144">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KD-GGYxjvqdxob9nk7W1-148" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="KD-GGYxjvqdxob9nk7W1-132" target="KD-GGYxjvqdxob9nk7W1-145">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KD-GGYxjvqdxob9nk7W1-150" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="KD-GGYxjvqdxob9nk7W1-132" target="KD-GGYxjvqdxob9nk7W1-149">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="425" y="760" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KD-GGYxjvqdxob9nk7W1-132" value="&lt;b&gt;&lt;font style=&quot;font-size: 21px;&quot;&gt;ApplicationContext&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="370" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KD-GGYxjvqdxob9nk7W1-136" value="&lt;b&gt;&lt;font style=&quot;font-size: 21px;&quot;&gt;WebApplicationContext&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="490" width="270" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KD-GGYxjvqdxob9nk7W1-140" value="" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="KD-GGYxjvqdxob9nk7W1-132" target="KD-GGYxjvqdxob9nk7W1-130">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="810" y="780" as="sourcePoint" />
+            <mxPoint x="860" y="730" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KD-GGYxjvqdxob9nk7W1-144" value="&lt;b&gt;&lt;font style=&quot;font-size: 21px;&quot;&gt;ClassPathXmlApplicationContext&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="570" width="360" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KD-GGYxjvqdxob9nk7W1-145" value="&lt;b&gt;&lt;font style=&quot;font-size: 21px;&quot;&gt;FileSystemXmlApplicationContext&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="650" width="360" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KD-GGYxjvqdxob9nk7W1-149" value="&lt;b&gt;&lt;font style=&quot;font-size: 21px;&quot;&gt;AnnotationsConfigApplicationContext&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-10" y="730" width="400" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KD-GGYxjvqdxob9nk7W1-151" value="&lt;b&gt;&lt;font style=&quot;font-size: 21px;&quot;&gt;Resources&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="160" width="260" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="KD-GGYxjvqdxob9nk7W1-152" value="&lt;b&gt;&lt;font style=&quot;font-size: 21px;&quot;&gt;Validation, Data Binding and Type Conversion&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="260" width="260" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="KD-GGYxjvqdxob9nk7W1-153" value="&lt;b&gt;&lt;font style=&quot;font-size: 21px;&quot;&gt;Spring Expression Language (SpEL)&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="360" width="260" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="KD-GGYxjvqdxob9nk7W1-154" value="&lt;b&gt;&lt;font style=&quot;font-size: 21px;&quot;&gt;AO&lt;/font&gt;&lt;font style=&quot;font-size: 21px;&quot;&gt;P with Spring&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="460" width="260" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="KD-GGYxjvqdxob9nk7W1-155" value="&lt;b&gt;&lt;font style=&quot;font-size: 21px;&quot;&gt;AOP APIs&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="550" width="260" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="KD-GGYxjvqdxob9nk7W1-156" value="&lt;b&gt;&lt;font style=&quot;font-size: 21px;&quot;&gt;Null Safety&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="640" width="260" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="KD-GGYxjvqdxob9nk7W1-157" value="&lt;b&gt;&lt;font style=&quot;font-size: 21px;&quot;&gt;Data Buffers and Codecs&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="730" width="260" height="70" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

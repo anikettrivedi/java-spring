@@ -6,20 +6,19 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.Arrays;
 
-public class SpringCoreXmlApplication {
+public class SpringCoreXmlDemo {
 
     public static void main(String[] args) {
 
+        System.out.printf("%n%n------ starting SpringCoreXmlApplication ------%n%n");
+        System.out.printf("%n%n------ basic spring IOC beans demo using XML bean definitions (dependency injection) ------%n%n");
+
         ApplicationContext context = new ClassPathXmlApplicationContext(
-                "services.xml",
-                "daos.xml"
+                "services.xml", "daos.xml"
         );
 
         PetStoreService service = context.getBean("petStore", PetStoreService.class);
 
-        System.out.printf("%n%n------ starting SpringCoreXmlApplication ------%n%n");
-
-        System.out.printf("%n%n------ basic spring IOC beans demo using XML bean definitions (dependency injection) ------%n%n");
         service.printClassName();
         service.printDependenciesClassNames();
 

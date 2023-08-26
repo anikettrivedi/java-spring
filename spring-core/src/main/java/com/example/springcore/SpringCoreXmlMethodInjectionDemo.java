@@ -15,17 +15,16 @@ import java.util.Arrays;
     - https://docs.spring.io/spring-framework/docs/5.2.25.RELEASE/spring-framework-reference/core.html#beans-factory-method-injection
     - https://docs.spring.io/spring-framework/docs/5.2.25.RELEASE/spring-framework-reference/core.html#beans-factory-scopes-sing-prot-interaction
 */
-public class SpringCoreXmlMethodInjectionApplication {
+public class SpringCoreXmlMethodInjectionDemo {
 
     public static void main(String[] args) {
+
+        System.out.printf("%n%n------ starting SpringCoreXmlMethodInjectionApplication ------%n%n");
+        System.out.printf("%n%n------ method injection demo using XML bean definitions ------%n%n");
 
         ApplicationContext context = new ClassPathXmlApplicationContext(
                 "methodinjection.xml"
         );
-
-        System.out.printf("%n%n------ starting SpringCoreXmlMethodInjectionApplication ------%n%n");
-
-        System.out.printf("%n%n------ method injection demo using XML bean definitions ------%n%n");
 
         // command manager is singleton but each command it creates is prototype
         CommandManager commandManager = context.getBean("commandManager", CommandManager.class);

@@ -1,6 +1,6 @@
-package com.example.javaconcurrency.syncronization;
+package com.example.javaconcurrency.synchronization;
 
-public class WithSynchronizedStatementsDemo {
+public class WithSynchronizedMethodsDemo {
 
     public static final int ITERATIONS_PER_THREAD = 1_000_000;
     public static final int THREAD_COUNT = 4;
@@ -41,26 +41,15 @@ public class WithSynchronizedStatementsDemo {
         );
     }
 
-    /*
-         - with synchronized statements we can do much more fine-grained synchronization.
-         - with synchronized methods, intrinsic lock is acquired on object/class where the method/static method is defined,
-         it is equivalent to using synchronized(this).
-     */
     private static class SynchronizedCounter {
         int count = 0;
-        final Object lock1 = new Object();
-        final Object lock2 = new Object();
 
-        public void increment() {
-            synchronized (lock1) {
-                count++;
-            }
+        public synchronized void increment() {
+            count++;
         }
 
         public synchronized int getCount() {
-            synchronized (lock2) {
-                return count;
-            }
+            return count;
         }
     }
 }

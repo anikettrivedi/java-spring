@@ -1,4 +1,4 @@
-package com.example.javaconcurrency.syncronization;
+package com.example.javaconcurrency.synchronization;
 
 public class WithoutSynchronizedMethodsDemo {
 

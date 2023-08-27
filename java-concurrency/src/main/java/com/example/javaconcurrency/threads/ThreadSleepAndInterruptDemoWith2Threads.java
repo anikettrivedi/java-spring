@@ -14,7 +14,7 @@ public class ThreadSleepAndInterruptDemoWith2Threads {
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
-                    System.out.printf("%-50s is interrupted, stopping thread execution immediately%n", Thread.currentThread().getName());
+                    System.out.printf("%-50s is interrupted%n", Thread.currentThread().getName());
                     throw new RuntimeException(e);
                 }
                 count++;
@@ -23,14 +23,11 @@ public class ThreadSleepAndInterruptDemoWith2Threads {
 
         // thread2 will use thread1.isInterrupted() to check if thread1 was interrupted or not
         Thread thread2 = new Thread(()->{
-            boolean isThread1interrupted = false;
-            while (!isThread1interrupted){
-                if (thread1.isInterrupted()) {
-                    System.out.printf("%-50s just found out that %s was interrupted%n", Thread.currentThread().getName(), thread1.getName());
-                    isThread1interrupted = true;
-                }
+            while (!thread1.isInterrupted()){
+                continue;
             }
-            System.out.printf("%-50s is finishing up since %s was interrupted%n", Thread.currentThread().getName(), thread1.getName());
+            System.out.printf("%-50s just found out that %s was interrupted%n", Thread.currentThread().getName(), thread1.getName());
+            System.out.printf("%-50s is finishing up since %n", Thread.currentThread().getName());
         });
 
 

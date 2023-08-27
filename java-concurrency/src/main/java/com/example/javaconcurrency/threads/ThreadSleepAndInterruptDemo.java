@@ -13,7 +13,7 @@ public class ThreadSleepAndInterruptDemo {
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
-                    System.out.printf("%-50s is interrupted, stopping thread execution immediately%n", Thread.currentThread().getName());
+                    System.out.printf("%-50s is interrupted%n", Thread.currentThread().getName());
                     throw new RuntimeException(e);
                 }
                 count++;

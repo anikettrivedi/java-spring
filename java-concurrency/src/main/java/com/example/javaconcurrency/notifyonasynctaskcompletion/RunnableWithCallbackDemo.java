@@ -1,12 +1,11 @@
 package com.example.javaconcurrency.notifyonasynctaskcompletion;
 
-import com.example.javaconcurrency.notifyonasynctaskcompletion.customexecutor.ThreadPoolExecutorWithCallback;
+import com.example.javaconcurrency.notifyonasynctaskcompletion.customrunnable.RunnableWithCallback;
 
-public class ThreadPoolExecutorWithCallbackDemo {
+public class RunnableWithCallbackDemo {
 
     public static void main(String[] args) {
 
-        // defining a generic task to be run in parallel using multiple threads
         Runnable task = () -> {
             int count = 0;
             while (count <= 2) {
@@ -20,17 +19,13 @@ public class ThreadPoolExecutorWithCallbackDemo {
             }
         };
 
-        // providing callback function implementation for executor to call after tasks are done executing
-        ThreadPoolExecutorWithCallback executor = new ThreadPoolExecutorWithCallback(
+        RunnableWithCallback runnableWithCallback = new RunnableWithCallback(
+                task,
                 v -> System.out.printf("%-40s completableFuture task completed%n", v)
         );
 
-        executor.execute(task);
-        executor.execute(task);
-        executor.execute(task);
-        executor.execute(task);
-        executor.execute(task);
-        executor.shutdown();
+        Thread threadWithCallBack = new Thread(runnableWithCallback);
+        threadWithCallBack.start();
 
 
     }

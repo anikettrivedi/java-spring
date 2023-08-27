@@ -1,4 +1,4 @@
-package com.example.javaconcurrency.notifyonasynctaskcompletion.customexecutors;
+package com.example.javaconcurrency.notifyonasynctaskcompletion.customexecutor;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;

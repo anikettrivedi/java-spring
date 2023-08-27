@@ -1,15 +1,16 @@
 package com.example.javaconcurrency.notifyonasynctaskcompletion.customexecutor;
 
+import com.example.javaconcurrency.notifyonasynctaskcompletion.callbacks.CallbackInterface;
+
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
-import java.util.function.Consumer;
 
 public class ThreadPoolExecutorWithCallback extends ThreadPoolExecutor {
 
-    Consumer<String> callback;
+    CallbackInterface<String> callback;
 
-    public ThreadPoolExecutorWithCallback(Consumer<String> callback) {
+    public ThreadPoolExecutorWithCallback(CallbackInterface<String> callback) {
         super(3, 3, 60, TimeUnit.SECONDS, new ArrayBlockingQueue<>(10));
         this.callback = callback;
     }

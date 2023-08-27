@@ -36,7 +36,7 @@ public class ThreadJoinDemo {
         // main is still not waiting for thread1 to complete
         System.out.printf("%-10s is still running in parallel without waiting for %s to complete %n", Thread.currentThread().getName(), thread1.getName());
 
-        // main will now wait for thread1 to complete
+        // main will now wait for thread1 to complete after calling thread1.join()
         System.out.printf("%-10s is now waiting for %s to complete %n", Thread.currentThread().getName(), thread1.getName());
         thread1.join();
         System.out.printf("%-10s wait is over %s is completed!!! %n", Thread.currentThread().getName(), thread1.getName());

@@ -1,4 +1,4 @@
-package com.example.javaconcurrency;
+package com.example.javaconcurrency.notifyonasynctaskcompletion;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;

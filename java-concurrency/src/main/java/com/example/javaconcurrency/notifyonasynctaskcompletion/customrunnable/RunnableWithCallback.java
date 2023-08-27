@@ -2,8 +2,6 @@ package com.example.javaconcurrency.notifyonasynctaskcompletion.customrunnable;
 
 import com.example.javaconcurrency.notifyonasynctaskcompletion.callbacks.CallbackInterface;
 
-import java.util.function.Consumer;
-
 public class RunnableWithCallback implements Runnable{
 
     private final Runnable task;

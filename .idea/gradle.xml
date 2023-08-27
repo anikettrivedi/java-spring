@@ -8,6 +8,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/java-concurrency" />
             <option value="$PROJECT_DIR$/rest-api" />
             <option value="$PROJECT_DIR$/rest-api-consumer" />
             <option value="$PROJECT_DIR$/scheduling" />

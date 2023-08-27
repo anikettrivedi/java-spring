@@ -1,9 +1,11 @@
 rootProject.name = 'java-spring'
 
 include(
+        "java-concurrency",
         "rest-api",
         "rest-api-consumer",
         "scheduling",
         "spring-core"
 )
+include 'java-concurrency'
 

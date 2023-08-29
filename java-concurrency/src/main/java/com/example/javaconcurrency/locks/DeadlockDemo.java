@@ -1,4 +1,4 @@
-package com.example.javaconcurrency.deadlocks;
+package com.example.javaconcurrency.locks;
 
 public class DeadlockDemo {
     public static void main(String[] args) throws InterruptedException {

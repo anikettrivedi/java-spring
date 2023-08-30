@@ -1,4 +1,4 @@
-package com.example.springcore;
+package com.example.springcore.xmlbased;
 
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

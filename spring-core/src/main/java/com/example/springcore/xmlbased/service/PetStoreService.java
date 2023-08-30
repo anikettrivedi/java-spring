@@ -1,4 +1,4 @@
-package com.example.springcore.service;
+package com.example.springcore.xmlbased.service;
 
 public interface PetStoreService {
 

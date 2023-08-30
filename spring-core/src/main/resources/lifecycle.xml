@@ -6,13 +6,13 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="lifecycle"
-          class="com.example.springcore.lifecycle.LifecycleObject"
+          class="com.example.springcore.xmlbased.lifecycle.LifecycleObject"
           init-method="init"
           destroy-method="destroy"
     />
 
     <bean id="lifecycle2"
-          class="com.example.springcore.lifecycle.LifecycleObject2"
+          class="com.example.springcore.xmlbased.lifecycle.LifecycleObject2"
           init-method="init"
           destroy-method="destroy"
     />

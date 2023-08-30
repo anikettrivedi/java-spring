@@ -5,12 +5,12 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="petStore" class="com.example.springcore.service.PetStoreServiceServiceImpl">
+    <bean id="petStore" class="com.example.springcore.xmlbased.service.PetStoreServiceServiceImpl">
         <property name="accountDao" ref="accountDao"/>
         <property name="itemDao" ref="itemDao"/>
     </bean>
 
-    <bean id="petStoreAutowired" class="com.example.springcore.service.PetStoreServiceServiceImpl" autowire="byName">
+    <bean id="petStoreAutowired" class="com.example.springcore.xmlbased.service.PetStoreServiceServiceImpl" autowire="byName">
         <property name="accountDao" ref="accountDao"/>
         <property name="itemDao" ref="itemDao"/>
     </bean>

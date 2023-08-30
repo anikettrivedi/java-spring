@@ -1,4 +1,4 @@
-package com.example.springcore.dao;
+package com.example.springcore.xmlbased.dao;
 
 public interface ItemDao {
 

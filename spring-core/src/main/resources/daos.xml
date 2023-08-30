@@ -5,10 +5,10 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="accountDao" class="com.example.springcore.dao.JpaAccountDao">
+    <bean id="accountDao" class="com.example.springcore.xmlbased.dao.JpaAccountDao">
         <constructor-arg type="int" value="1"/>
     </bean>
-    <bean id="itemDao" class="com.example.springcore.dao.JpaItemDao">
+    <bean id="itemDao" class="com.example.springcore.xmlbased.dao.JpaItemDao">
         <constructor-arg type="int" value="2"/>
     </bean>
 </beans>

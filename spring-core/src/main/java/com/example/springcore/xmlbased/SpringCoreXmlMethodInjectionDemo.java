@@ -1,6 +1,6 @@
-package com.example.springcore;
+package com.example.springcore.xmlbased;
 
-import com.example.springcore.methodinjection.CommandManager;
+import com.example.springcore.xmlbased.methodinjection.CommandManager;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

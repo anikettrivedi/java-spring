@@ -1,6 +1,6 @@
-package com.example.springcore.lifecycle;
+package com.example.springcore.xmlbased.lifecycle;
 
-public class LifecycleObject {
+public class LifecycleObject2 {
 
     public void init(){
         System.out.println("init method called");

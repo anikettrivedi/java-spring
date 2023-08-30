@@ -1,7 +1,7 @@
-package com.example.springcore.service;
+package com.example.springcore.xmlbased.service;
 
-import com.example.springcore.dao.AccountDao;
-import com.example.springcore.dao.ItemDao;
+import com.example.springcore.xmlbased.dao.AccountDao;
+import com.example.springcore.xmlbased.dao.ItemDao;
 
 public class PetStoreServiceServiceImpl implements PetStoreService {
 

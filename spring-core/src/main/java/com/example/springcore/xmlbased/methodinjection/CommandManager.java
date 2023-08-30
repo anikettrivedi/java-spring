@@ -1,4 +1,4 @@
-package com.example.springcore.methodinjection;
+package com.example.springcore.xmlbased.methodinjection;
 
 public abstract class CommandManager {
 

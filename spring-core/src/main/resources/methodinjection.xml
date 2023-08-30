@@ -6,12 +6,12 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- a stateful bean deployed as a prototype (non-singleton) -->
-    <bean id="myCommand" class="com.example.springcore.methodinjection.Command" scope="prototype">
+    <bean id="myCommand" class="com.example.springcore.xmlbased.methodinjection.Command" scope="prototype">
         <!-- inject dependencies here as required -->
     </bean>
 
     <!-- commandProcessor uses statefulCommandHelper -->
-    <bean id="commandManager" class="com.example.springcore.methodinjection.CommandManager">
+    <bean id="commandManager" class="com.example.springcore.xmlbased.methodinjection.CommandManager">
         <lookup-method name="createCommand" bean="myCommand"/>
     </bean>
 </beans>

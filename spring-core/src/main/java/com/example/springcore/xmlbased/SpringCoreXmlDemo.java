@@ -1,6 +1,6 @@
-package com.example.springcore;
+package com.example.springcore.xmlbased;
 
-import com.example.springcore.service.PetStoreService;
+import com.example.springcore.xmlbased.service.PetStoreService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

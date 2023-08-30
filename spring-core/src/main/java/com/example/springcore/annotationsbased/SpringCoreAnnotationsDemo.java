@@ -2,6 +2,7 @@ package com.example.springcore.annotationsbased;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.Arrays;
 
@@ -12,9 +13,14 @@ public class SpringCoreAnnotationsDemo {
         System.out.printf("%n%n------ starting SpringCoreAnnotationsDemo ------%n%n");
         System.out.printf("%n%n------ basic spring IOC beans demo using annotations bean definitions (dependency injection) ------%n%n");
 
+
         ApplicationContext context = new AnnotationConfigApplicationContext(
                 "com.example.springcore.annotationsbased"
         );
+
+        // ApplicationContext context = new ClassPathXmlApplicationContext(
+        //     "annotations.xml"
+        // );
 
         System.out.printf("%n%n------ bean definition names ------%n%n");
         Arrays.asList(context.getBeanDefinitionNames()).forEach(System.out::println);

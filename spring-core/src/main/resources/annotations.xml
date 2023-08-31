@@ -8,5 +8,9 @@
 		https://www.springframework.org/schema/context/spring-context.xsd">
 
     <context:annotation-config/>
+    <beans>
+        <bean id="dummyService" class="com.example.springcore.annotationsbased.service.DummyServiceFieldInjection"></bean>
+        <bean id="dummyDao" class="com.example.springcore.annotationsbased.dao.DummyDao"></bean>
+    </beans>
 
 </beans>

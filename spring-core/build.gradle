@@ -14,8 +14,12 @@ repositories {
 }
 
 dependencies {
-	// xml based spring context
+	// xml,annotations based spring context dependencies
 	implementation 'org.springframework:spring-context:6.0.11'
+
+	// AspectJ dependencies
+	implementation 'org.aspectj:aspectjweaver:1.9.20.1'
+
 }
 
 tasks.named('test') {

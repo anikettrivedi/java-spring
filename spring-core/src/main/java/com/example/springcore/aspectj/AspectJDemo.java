@@ -22,18 +22,25 @@ public class AspectJDemo {
         serviceLayer.serviceNo1();
         serviceLayer.serviceNo2();
 
-        System.out.println("\n\n--------- example number 03 -------");
+        System.out.println("\n\n--------- example number 03: Accessing return values -------");
         someMethods.getSomeString();
 
 
-        System.out.println("\n\n--------- example number 04 -------");
+        System.out.println("\n\n--------- example number 04: Accessing thrown action -------");
         try {
             someMethods.throwRuntimeException();
         } catch (Exception ignored) {
         }
 
-        System.out.println("\n\n--------- example number 05 -------");
-        someMethods.sleepForNSeconds(4);
+        System.out.println("\n\n--------- example number 05: Accessing proceeding joinpoint -------");
+        someMethods.sleepForNSeconds(1);
+
+        System.out.println("\n\n--------- example number 06: Accessing current joinpoint -------");
+        someMethods.doSomethingsWithParams(new MethodParams("Lionel", "Messi"));
+
+        System.out.println("\n\n--------- example number 07: Accessing current joinpoint -------");
+        someMethods.doSomethingsMoreWithParams(new MethodParams("Lionel", "Messi"));
+
     }
 
 }

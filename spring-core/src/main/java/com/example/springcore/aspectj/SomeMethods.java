@@ -24,4 +24,12 @@ public class SomeMethods {
         return String.format("slept for %s seconds!", n);
     }
 
+    public String doSomethingsWithParams(MethodParams params){
+        return params.getParamOne() + " " + params.getParamTwo();
+    }
+
+    public String doSomethingsMoreWithParams(MethodParams params){
+        return params.getParamOne() + " " + params.getParamTwo();
+    }
+
 }

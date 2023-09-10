@@ -13,7 +13,7 @@ public class EmbeddedH2DbDemo {
     public static void main(String[] args) {
 
         ApplicationContext context = new AnnotationConfigApplicationContext(
-                "com.example.springcore.springdatajdbc.h2DbConfig"
+                "com.example.springcore.springdatajdbc.h2db"
         );
 
         DataSource h2DataSource = context.getBean("dataSource", DataSource.class);

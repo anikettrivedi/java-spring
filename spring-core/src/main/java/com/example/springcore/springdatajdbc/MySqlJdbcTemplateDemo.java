@@ -1,25 +1,16 @@
 package com.example.springcore.springdatajdbc;
 
 import com.example.springcore.springdatajdbc.countryDbDaos.CountryDao;
-import com.example.springcore.springdatajdbc.pojo.Country;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
 
-import javax.sql.DataSource;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.List;
-
-public class EmbeddedH2JdbcTemplateDemo {
+public class MySqlJdbcTemplateDemo {
 
     public static void main(String[] args) {
 
-        // note that h2db package is added in context
+        // note that mysqldb package is added in context
         ApplicationContext context = new AnnotationConfigApplicationContext(
-                "com.example.springcore.springdatajdbc.h2db",
+                "com.example.springcore.springdatajdbc.mysqldb",
                 "com.example.springcore.springdatajdbc.countryDbDaos"
         );
 

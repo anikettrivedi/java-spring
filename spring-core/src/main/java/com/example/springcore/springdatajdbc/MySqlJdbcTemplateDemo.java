@@ -6,6 +6,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class MySqlJdbcTemplateDemo {
 
+    // todo - mysql db needs to be setup locally for this to work, refer ref-materials/mysql
     public static void main(String[] args) {
 
         // note that mysqldb package is added in context

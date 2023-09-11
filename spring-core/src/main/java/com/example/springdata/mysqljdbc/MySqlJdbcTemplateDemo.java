@@ -1,6 +1,6 @@
-package com.example.springcore.springdatajdbc;
+package com.example.springdata.mysqljdbc;
 
-import com.example.springcore.springdatajdbc.countryDbDaos.CountryDao;
+import com.example.springdata.mysqljdbc.dao.CountryDao;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -11,8 +11,7 @@ public class MySqlJdbcTemplateDemo {
 
         // note that mysqldb package is added in context
         ApplicationContext context = new AnnotationConfigApplicationContext(
-                "com.example.springcore.springdatajdbc.mysqldb",
-                "com.example.springcore.springdatajdbc.countryDbDaos"
+                "com.example.springdata.mysqljdbc"
         );
 
         CountryDao dao = context.getBean("jdbcCountryDao", CountryDao.class);

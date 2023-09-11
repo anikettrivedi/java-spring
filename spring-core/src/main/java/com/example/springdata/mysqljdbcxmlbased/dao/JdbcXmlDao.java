@@ -1,6 +1,6 @@
-package com.example.springcore.springdatajdbc.xmlbased.dao;
+package com.example.springdata.mysqljdbcxmlbased.dao;
 
-import com.example.springcore.springdatajdbc.pojo.Country;
+import com.example.springdata.pojos.Country;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.sql.DataSource;

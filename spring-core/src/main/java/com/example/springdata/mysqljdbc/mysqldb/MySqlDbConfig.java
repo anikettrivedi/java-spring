@@ -1,4 +1,4 @@
-package com.example.springcore.springdatajdbc.mysqldb;
+package com.example.springdata.mysqljdbc.mysqldb;
 
 import com.mysql.cj.jdbc.Driver;
 import org.springframework.context.annotation.Bean;

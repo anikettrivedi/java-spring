@@ -1,4 +1,4 @@
-package com.example.springcore.springdatajdbc.h2db;
+package com.example.springdata.embeddedjdbc.h2db;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

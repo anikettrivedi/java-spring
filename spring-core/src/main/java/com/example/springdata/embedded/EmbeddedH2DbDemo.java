@@ -1,4 +1,4 @@
-package com.example.springcore.springdatajdbc;
+package com.example.springdata.embedded;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -13,7 +13,7 @@ public class EmbeddedH2DbDemo {
     public static void main(String[] args) {
 
         ApplicationContext context = new AnnotationConfigApplicationContext(
-                "com.example.springcore.springdatajdbc.h2db"
+                "com.example.springdata.embedded"
         );
 
         DataSource h2DataSource = context.getBean("dataSource", DataSource.class);

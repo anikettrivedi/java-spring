@@ -18,7 +18,7 @@
         <property name="password" value="${jdbc.password}"/>
     </bean>
 
-    <bean id="jdbcXmlDao" class="com.example.springcore.springdatajdbc.xmlbased.dao.JdbcXmlDao">
+    <bean id="jdbcXmlDao" class="com.example.springdata.mysqljdbcxmlbased.dao.JdbcXmlDao">
         <constructor-arg name="dataSource" ref="dataSource"/>
     </bean>
 

@@ -1,6 +1,6 @@
-package com.example.springcore.springdatajdbc;
+package com.example.springdata.mysqljdbcxmlbased;
 
-import com.example.springcore.springdatajdbc.xmlbased.dao.XmlDao;
+import com.example.springdata.mysqljdbcxmlbased.dao.XmlDao;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

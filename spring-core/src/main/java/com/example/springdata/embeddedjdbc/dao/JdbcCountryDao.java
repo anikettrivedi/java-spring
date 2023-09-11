@@ -1,6 +1,6 @@
-package com.example.springcore.springdatajdbc.countryDbDaos;
+package com.example.springdata.embeddedjdbc.dao;
 
-import com.example.springcore.springdatajdbc.pojo.Country;
+import com.example.springdata.pojos.Country;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;

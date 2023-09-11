@@ -1,4 +1,4 @@
-package com.example.springcore.springdatajdbc.pojo;
+package com.example.springdata.pojos;
 
 public class Country {
 

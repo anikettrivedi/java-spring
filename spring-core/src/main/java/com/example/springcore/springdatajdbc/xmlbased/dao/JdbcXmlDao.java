@@ -1,20 +1,16 @@
-package com.example.springcore.springdatajdbc.countryDbDaos;
+package com.example.springcore.springdatajdbc.xmlbased.dao;
 
 import com.example.springcore.springdatajdbc.pojo.Country;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
 import java.util.List;
 
-@Repository
-public class JdbcCountryDao implements CountryDao {
+public class JdbcXmlDao implements XmlDao {
 
     private final JdbcTemplate jdbcTemplate;
 
-    @Autowired
-    public JdbcCountryDao(DataSource dataSource) {
+    public JdbcXmlDao(DataSource dataSource) {
         this.jdbcTemplate = new JdbcTemplate(dataSource);
     }
 

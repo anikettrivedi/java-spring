@@ -27,6 +27,9 @@ dependencies {
 	implementation 'com.h2database:h2:2.2.220' // ideally it should be only be used while testing, this is added to demonstrate embedded db for demo purposes
 	implementation 'mysql:mysql-connector-java:8.0.33'
 
+	// org.apache.commons.dbcp2.BasicDataSource
+	implementation 'org.apache.commons:commons-dbcp2:2.9.0'
+
 	// --------------- spring web
 	implementation 'org.springframework:spring-web:6.0.11'
 }

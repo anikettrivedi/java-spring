@@ -10,9 +10,6 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/java-concurrency" />
             <option value="$PROJECT_DIR$/spring-core" />
-            <option value="$PROJECT_DIR$/springboot-rest-api" />
-            <option value="$PROJECT_DIR$/springboot-rest-api-consumer" />
-            <option value="$PROJECT_DIR$/springboot-scheduling" />
           </set>
         </option>
       </GradleProjectSettings>

@@ -27,13 +27,15 @@ def springDataVersion = "3.1.3"
 
 dependencies {
 
+	// --------------- SPRING CORE
+
 	// --------------- xml,annotations based spring context dependencies
 	implementation "org.springframework:spring-context"
 
 	// --------------- AspectJ dependencies
 	implementation "org.aspectj:aspectjweaver:1.9.20.1"
 
-	// --------------- spring data
+	// --------------- SPRING DATA
 
 	// --------------- jdbc
 	implementation "org.springframework.data:spring-data-jdbc:${springDataVersion}"
@@ -54,6 +56,14 @@ dependencies {
 
 	// org.apache.commons.dbcp2.BasicDataSource
 	implementation "org.apache.commons:commons-dbcp2:2.9.0"
+
+	// ---------------- SPRING WEB MVC ON SERVLET STACK
+
+	implementation 'org.springframework:spring-web'
+	implementation 'org.springframework:spring-webmvc'
+
+	implementation 'jakarta.servlet:jakarta.servlet-api:6.0.0'
+
 
 }
 

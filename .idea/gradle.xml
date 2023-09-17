@@ -9,7 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/java-concurrency" />
-            <option value="$PROJECT_DIR$/java-webapp" />
+            <option value="$PROJECT_DIR$/spring-boot-web" />
             <option value="$PROJECT_DIR$/spring-core" />
           </set>
         </option>

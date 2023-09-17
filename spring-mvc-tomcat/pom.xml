@@ -50,7 +50,10 @@
 
 
   </dependencies>
+
+  <!-- build configs -->
   <build>
+
     <finalName>spring-mvc-tomcat</finalName>
 
     <plugins>

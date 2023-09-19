@@ -1,2 +1,7 @@
-package org.example.creationalpatterns.abstractfactory;public class ComputerAbstractFactory {
+package org.example.creationalpatterns.abstractfactory;
+
+import org.example.creationalpatterns.factory.Computer;
+
+public interface ComputerAbstractFactory {
+    Computer createComputer();
 }

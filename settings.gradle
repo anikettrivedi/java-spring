@@ -3,4 +3,5 @@ rootProject.name = 'java-spring'
 include 'java-concurrency'
 include 'spring-core'
 include 'spring-boot-web'
+include 'java-design-patterns'
 

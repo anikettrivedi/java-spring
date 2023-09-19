@@ -1,2 +1,9 @@
-package org.example.creationalpatterns.singleton;public enum EnumSingleton {
+package org.example.creationalpatterns.singleton;
+
+public enum EnumSingleton {
+
+    INSTANCE;
+
+    public static void doSomething(){}
+
 }

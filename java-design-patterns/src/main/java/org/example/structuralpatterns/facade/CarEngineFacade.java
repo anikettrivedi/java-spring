@@ -1,13 +1,13 @@
 package org.example.structuralpatterns.facade;
 
 public class CarEngineFacade {
-    private static int DEFAULT_COOLING_TEMP = 90;
-    private static int MAX_ALLOWED_TEMP = 50;
-    private FuelInjector fuelInjector = new FuelInjector();
-    private AirFlowController airFlowController = new AirFlowController();
-    private Starter starter = new Starter();
-    private CoolingController coolingController = new CoolingController();
-    private CatalyticConverter catalyticConverter = new CatalyticConverter();
+    private static final int DEFAULT_COOLING_TEMP = 90;
+    private static final int MAX_ALLOWED_TEMP = 50;
+    private final FuelInjector fuelInjector = new FuelInjector();
+    private final AirFlowController airFlowController = new AirFlowController();
+    private final Starter starter = new Starter();
+    private final CoolingController coolingController = new CoolingController();
+    private final CatalyticConverter catalyticConverter = new CatalyticConverter();
 
     public void startEngine() {
         fuelInjector.on();

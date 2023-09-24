@@ -10,6 +10,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/java-concurrency" />
             <option value="$PROJECT_DIR$/java-design-patterns" />
+            <option value="$PROJECT_DIR$/java-streams-api" />
             <option value="$PROJECT_DIR$/spring-boot-web" />
             <option value="$PROJECT_DIR$/spring-core" />
           </set>

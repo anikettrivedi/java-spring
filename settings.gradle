@@ -4,4 +4,5 @@ include 'java-concurrency'
 include 'spring-core'
 include 'spring-boot-web'
 include 'java-design-patterns'
+include 'java-streams-api'
 

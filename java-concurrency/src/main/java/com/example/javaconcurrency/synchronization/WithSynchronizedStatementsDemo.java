@@ -42,9 +42,9 @@ public class WithSynchronizedStatementsDemo {
     }
 
     /*
-         - with synchronized statements we can do much more fine-grained synchronization.
-         - with synchronized methods, intrinsic lock is acquired on object/class where the method/static method is defined,
-         it is equivalent to using synchronized(this).
+     *  with synchronized statements we can do much more fine-grained synchronization.
+     *  with synchronized methods, intrinsic lock is acquired on object/class where the method/static method is defined,
+     *  it is equivalent to using synchronized(this).
      */
     private static class SynchronizedCounter {
         int count = 0;
@@ -57,7 +57,7 @@ public class WithSynchronizedStatementsDemo {
             }
         }
 
-        public synchronized int getCount() {
+        public int getCount() {
             synchronized (lock2) {
                 return count;
             }

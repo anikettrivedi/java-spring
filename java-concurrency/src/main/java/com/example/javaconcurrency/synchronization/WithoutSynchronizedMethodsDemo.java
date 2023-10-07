@@ -1,5 +1,6 @@
 package com.example.javaconcurrency.synchronization;
 
+// demonstration of race condition
 public class WithoutSynchronizedMethodsDemo {
 
     public static final int ITERATIONS_PER_THREAD = 2_000;

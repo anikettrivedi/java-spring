@@ -1,43 +1,57 @@
 plugins {
-    id 'java'
-    id 'org.springframework.boot' version '3.1.4'
-    id 'io.spring.dependency-management' version '1.1.3'
+    id "java"
+    id "org.springframework.boot" version "3.1.4"
+    id "io.spring.dependency-management" version "1.1.3"
 }
 
-group = 'com.example'
-version = '0.0.1-SNAPSHOT'
+group = "com.example"
+version = "0.0.1-SNAPSHOT"
 
 java {
-    sourceCompatibility = '17'
+    sourceCompatibility = "17"
 }
 
 repositories {
     mavenCentral()
 }
 
+def springDataVersion = "3.1.3"
+def thymeLeafVersion = "3.1.1.RELEASE"
+def lombokVersion = "1.18.30"
+def h2Version = "2.2.220"
+
 dependencies {
 
+    // -------------------------- packaging --------------------------
+    
     // spring boot and transitive dependencies
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
-    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation "org.springframework.boot:spring-boot-starter-web"
+    implementation "org.springframework.boot:spring-boot-starter-thymeleaf"
+    implementation "org.springframework.boot:spring-boot-starter-security"
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 
-    //  Temporary explicit version to fix Thymeleaf bug
-    implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6:3.1.1.RELEASE'
+    // Temporary explicit version to fix Thymeleaf bug
+    implementation "org.thymeleaf.extras:thymeleaf-extras-springsecurity6:${thymeLeafVersion}"
 
     // json
-    implementation 'org.json:json:20230618'
+    implementation "org.json:json:20230618"
 
     // lombok (to avoid boilerplate code)
-    compileOnly 'org.projectlombok:lombok:1.18.30'
-    annotationProcessor 'org.projectlombok:lombok:1.18.30'
+    compileOnly "org.projectlombok:lombok:${lombokVersion}"
+    annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
 
-    // test dependencies
-    implementation 'org.springframework.boot:spring-boot-devtools'
-    implementation 'org.springframework.security:spring-security-test'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    // -------------------------- test --------------------------
+
+    // in-memory db
+    implementation "com.h2database:h2:${h2Version}"
+
+    // spring
+    implementation "org.springframework.boot:spring-boot-devtools"
+    implementation "org.springframework.security:spring-security-test"
+    testImplementation "org.springframework.boot:spring-boot-starter-test"
 }
 
-tasks.named('test') {
+
+tasks.named("test") {
     useJUnitPlatform()
 }

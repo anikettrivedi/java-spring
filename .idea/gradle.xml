@@ -11,7 +11,6 @@
             <option value="$PROJECT_DIR$/java-concurrency" />
             <option value="$PROJECT_DIR$/java-core-apis" />
             <option value="$PROJECT_DIR$/java-design-patterns" />
-            <option value="$PROJECT_DIR$/spring-boot-web" />
             <option value="$PROJECT_DIR$/spring-boot-web-secure" />
             <option value="$PROJECT_DIR$/spring-core" />
           </set>

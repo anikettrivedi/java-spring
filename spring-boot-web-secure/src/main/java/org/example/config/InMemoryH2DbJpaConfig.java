@@ -12,7 +12,7 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import javax.sql.DataSource;
 import java.util.Properties;
 
-@Profile("dev")
+@Profile("dev-auth-h2")
 @Configuration
 public class InMemoryH2DbJpaConfig {
 

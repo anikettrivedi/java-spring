@@ -15,6 +15,7 @@ import org.springframework.security.web.SecurityFilterChain;
 
 /*
  * simple in-memory authorization using thymeleaf UI & Spring Security
+ * usernames & password are hardcoded without encryption (unsafe)
  * */
 
 @AllArgsConstructor

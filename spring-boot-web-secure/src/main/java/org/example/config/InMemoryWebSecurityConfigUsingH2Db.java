@@ -19,6 +19,10 @@ import java.util.stream.Collectors;
 
 /*
  * simple in-memory authorization using thymeleaf UI & Spring Security & Spring JPA (In Memory H2 DB)
+ * username,passwords,roles are stored in in-memory H2 DB without any encryption (unsafe)
+ * auth data is being loaded into memory from DB via JPA Repository
+ *  - bad practice, as when user count gets too high, it will slow the application
+ *  - ideally user data should be fetched from only when a specific user tries to log in
  * */
 
 @AllArgsConstructor
@@ -31,14 +35,13 @@ public class InMemoryWebSecurityConfigUsingH2Db {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        return http.authorizeHttpRequests((requests) -> requests
+        return http
+                .authorizeHttpRequests(requests -> requests
                         .requestMatchers("/", "/home")
                         .permitAll()
                         .anyRequest()
                         .authenticated())
-                .formLogin((form) -> form
-                        .loginPage("/login")
-                        .permitAll())
+                .formLogin(form -> form.loginPage("/login").permitAll())
                 .logout(LogoutConfigurer::permitAll)
                 .build();
     }

@@ -10,7 +10,9 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  * */
 @Configuration
 @Profile({
-        "dev-auth", "dev-auth-h2"
+        "dev-auth",
+        "dev-auth-h2",
+        "dev-auth-h2-encoded"
 })
 public class MvcThymeleafConfig implements WebMvcConfigurer {
 

@@ -20,7 +20,7 @@ import javax.sql.DataSource;
 import static org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType.H2;
 
 /*
- * JDBC based encoded password storage and authentication
+ * JDBC based encoded password storage and authentication with ThymeLeaf authentication page
  * user auth details are stored in in-memory H2 DB and password is encoded (safer)
  * auth data is being queried from DB and loaded into memory
  *  - bad approach, as when user count get high, it will slow down the app because of memory overhead

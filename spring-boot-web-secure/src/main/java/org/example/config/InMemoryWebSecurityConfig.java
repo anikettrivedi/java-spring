@@ -24,19 +24,23 @@ import org.springframework.security.web.SecurityFilterChain;
 @Profile("dev-auth")
 public class InMemoryWebSecurityConfig {
 
-    private final UserRolesRepository userRolesRepository;
-
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        return http.authorizeHttpRequests((requests) -> requests
-                        .requestMatchers("/", "/home")
-                        .permitAll()
-                        .anyRequest()
-                        .authenticated())
-                .formLogin((form) -> form
-                        .loginPage("/login")
-                        .permitAll())
-                .logout(LogoutConfigurer::permitAll)
+        return http.authorizeHttpRequests(
+                        authorizationManagerRequestMatcherRegistry -> authorizationManagerRequestMatcherRegistry
+                                .requestMatchers("/", "/home")
+                                .permitAll()
+                                .anyRequest()
+                                .authenticated()
+                )
+                .formLogin(
+                        httpSecurityFormLoginConfigurer -> httpSecurityFormLoginConfigurer
+                                .loginPage("/login")
+                                .permitAll()
+                )
+                .logout(
+                        httpSecurityLogoutConfigurer -> httpSecurityLogoutConfigurer.permitAll()
+                )
                 .build();
     }
 

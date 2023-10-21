@@ -5,4 +5,5 @@ include 'java-design-patterns'
 include 'java-core-apis'
 include 'spring-core'
 include 'spring-boot-web-secure'
+include 'java-ds'
 

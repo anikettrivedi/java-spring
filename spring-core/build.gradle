@@ -24,8 +24,13 @@ dependencyManagement {
 }
 
 def springDataVersion = "3.1.3"
+def lombokVersion = "1.18.30"
 
 dependencies {
+
+	// lombok (to avoid boilerplate code)
+	compileOnly "org.projectlombok:lombok:${lombokVersion}"
+	annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
 
 	// --------------- SPRING CORE
 

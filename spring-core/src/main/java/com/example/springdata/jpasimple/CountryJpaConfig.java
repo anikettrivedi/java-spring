@@ -1,4 +1,4 @@
-package com.example.springdata.jpa;
+package com.example.springdata.jpasimple;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -7,15 +7,14 @@ import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
-import org.springframework.orm.jpa.persistenceunit.PersistenceManagedTypes;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 
 import javax.sql.DataSource;
 import java.util.Properties;
 
 @Configuration
-@EnableJpaRepositories("com.example.springdata.jpa")
-public class JpaConfig {
+@EnableJpaRepositories("com.example.springdata.jpasimple")
+public class CountryJpaConfig {
 
     @Bean
     public DataSource dataSource() {
@@ -24,7 +23,7 @@ public class JpaConfig {
                 .setType(EmbeddedDatabaseType.H2)
                 .setScriptEncoding("UTF-8")
                 .ignoreFailedDrops(true)
-                .addScript("h2-db-setup.sql")
+                .addScript("ddl/ddl-simple.sql")
                 .build();
     }
 
@@ -43,7 +42,7 @@ public class JpaConfig {
         entityManagerFactory.setJpaProperties(jpaProperties);
         entityManagerFactory.setDataSource(dataSource());
         entityManagerFactory.setJpaVendorAdapter(hibernateJpaVendorAdapter());
-        entityManagerFactory.setPackagesToScan("com.example.springdata.jpa");
+        entityManagerFactory.setPackagesToScan("com.example.springdata.jpasimple");
 
         return entityManagerFactory;
     }

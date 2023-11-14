@@ -1,20 +1,20 @@
-package com.example.springdata.jpa;
+package com.example.springdata.jpasimple;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "countries")
-public class CountryPojo {
+@Table(name = "country")
+public class Country {
 
     @Id
     private int id;
     private String name;
 
-    public CountryPojo() {}
+    public Country() {}
 
-    public CountryPojo(int id, String name) {
+    public Country(int id, String name) {
         this.id = id;
         this.name = name;
     }
@@ -36,7 +36,7 @@ public class CountryPojo {
 
     @Override
     public String toString() {
-        return "CountryPojo{" +
+        return "Country{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 '}';

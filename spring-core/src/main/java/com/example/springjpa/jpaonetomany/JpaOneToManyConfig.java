@@ -1,10 +1,11 @@
-package com.example.springjpa.jpasimple;
+package com.example.springjpa.jpaonetomany;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
+import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
@@ -13,8 +14,8 @@ import javax.sql.DataSource;
 import java.util.Properties;
 
 @Configuration
-@EnableJpaRepositories("com.example.springjpa.jpasimple")
-public class CountryJpaConfig {
+@EnableJpaRepositories("com.example.springjpa.jpaonetomany")
+public class JpaOneToManyConfig {
 
     @Bean
     public DataSource dataSource() {
@@ -23,7 +24,7 @@ public class CountryJpaConfig {
                 .setType(EmbeddedDatabaseType.H2)
                 .setScriptEncoding("UTF-8")
                 .ignoreFailedDrops(true)
-                .addScript("ddl/ddl-simple.sql")
+                .addScript("ddl/ddl-one-to-many.sql")
                 .build();
     }
 
@@ -34,24 +35,34 @@ public class CountryJpaConfig {
 
     @Bean
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
-        LocalContainerEntityManagerFactoryBean entityManagerFactory = new LocalContainerEntityManagerFactoryBean();
+        LocalContainerEntityManagerFactoryBean emf = new LocalContainerEntityManagerFactoryBean();
 
         Properties jpaProperties = new Properties();
         jpaProperties.setProperty("hibernate.dialect", "org.hibernate.dialect.H2Dialect");
+        jpaProperties.setProperty("hibernate.enable_lazy_load_no_trans", "true");
 
-        entityManagerFactory.setJpaProperties(jpaProperties);
-        entityManagerFactory.setDataSource(dataSource());
-        entityManagerFactory.setJpaVendorAdapter(hibernateJpaVendorAdapter());
-        entityManagerFactory.setPackagesToScan("com.example.springjpa.jpasimple");
+        emf.setJpaProperties(jpaProperties);
+        emf.setDataSource(dataSource());
+        emf.setJpaVendorAdapter(hibernateJpaVendorAdapter());
+        emf.setPackagesToScan("com.example.springjpa.jpaonetomany");
 
-        return entityManagerFactory;
+        return emf;
     }
 
     @Bean
-    public JpaTransactionManager transactionManager(){
+    public LocalSessionFactoryBean entityFactoryBean() {
+        LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
+        sessionFactory.setDataSource(dataSource());
+        sessionFactory.setPackagesToScan("com.example.springjpa.jpaonetomany");
+        return sessionFactory;
+    }
+
+    @Bean
+    public JpaTransactionManager transactionManager() {
         JpaTransactionManager transactionManager = new JpaTransactionManager();
         transactionManager.setEntityManagerFactory(entityManagerFactory().getObject());
         return transactionManager;
     }
+
 
 }

@@ -11,12 +11,14 @@ import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 @Entity
 @Table(name="cart_item")
 @Getter
 @Setter
 @NoArgsConstructor
+@ToString(exclude = "cart")
 public class CartItem {
 
 	@Id

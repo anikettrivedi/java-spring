@@ -1,11 +1,10 @@
-package com.example.springjpa.jpaonetomany;
+package com.example.springjpa.jpasimple;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
-import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
@@ -14,8 +13,8 @@ import javax.sql.DataSource;
 import java.util.Properties;
 
 @Configuration
-@EnableJpaRepositories("com.example.springdata.jpaonetomany")
-public class CartJpaConfig {
+@EnableJpaRepositories("com.example.springjpa.jpasimple")
+public class JpaSimpleConfig {
 
     @Bean
     public DataSource dataSource() {
@@ -24,7 +23,7 @@ public class CartJpaConfig {
                 .setType(EmbeddedDatabaseType.H2)
                 .setScriptEncoding("UTF-8")
                 .ignoreFailedDrops(true)
-                .addScript("ddl/ddl-one-to-many.sql")
+                .addScript("ddl/ddl-simple.sql")
                 .build();
     }
 
@@ -43,24 +42,16 @@ public class CartJpaConfig {
         entityManagerFactory.setJpaProperties(jpaProperties);
         entityManagerFactory.setDataSource(dataSource());
         entityManagerFactory.setJpaVendorAdapter(hibernateJpaVendorAdapter());
-        entityManagerFactory.setPackagesToScan("com.example.springdata.jpaonetomany");
+        entityManagerFactory.setPackagesToScan("com.example.springjpa.jpasimple");
 
         return entityManagerFactory;
     }
 
-    @Bean
-    public LocalSessionFactoryBean entityFactoryBean() {
-        LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
-        sessionFactory.setDataSource(dataSource());
-        sessionFactory.setPackagesToScan("com.example.springdata.jpaonetomany");
-        return sessionFactory;
-    }
     @Bean
     public JpaTransactionManager transactionManager(){
         JpaTransactionManager transactionManager = new JpaTransactionManager();
         transactionManager.setEntityManagerFactory(entityManagerFactory().getObject());
         return transactionManager;
     }
-
 
 }

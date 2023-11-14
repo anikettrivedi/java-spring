@@ -1,6 +1,6 @@
 package com.example.springjdbc.mysqljdbcxmlbased;
 
-import com.example.springjpa.pojos.Country;
+import com.example.springjpa.jpasimple.Country;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.sql.DataSource;

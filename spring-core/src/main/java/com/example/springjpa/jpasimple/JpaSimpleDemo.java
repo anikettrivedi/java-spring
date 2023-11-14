@@ -7,7 +7,7 @@ public class JpaSimpleDemo {
 
     public static void main(String[] args) {
 
-        ApplicationContext context = new AnnotationConfigApplicationContext("com.example.springdata.jpasimple");
+        ApplicationContext context = new AnnotationConfigApplicationContext("com.example.springjpa.jpasimple");
 
         CountryRepository repository = context.getBean(CountryRepository.class);
 

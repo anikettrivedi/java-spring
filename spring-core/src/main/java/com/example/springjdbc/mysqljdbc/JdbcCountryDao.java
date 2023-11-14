@@ -1,6 +1,6 @@
 package com.example.springjdbc.mysqljdbc;
 
-import com.example.springjpa.pojos.Country;
+import com.example.springjpa.jpasimple.Country;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;

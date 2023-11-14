@@ -13,7 +13,7 @@ import javax.sql.DataSource;
 import java.util.Properties;
 
 @Configuration
-@EnableJpaRepositories("com.example.springdata.jpasimple")
+@EnableJpaRepositories("com.example.springjpa.jpasimple")
 public class CountryJpaConfig {
 
     @Bean
@@ -42,7 +42,7 @@ public class CountryJpaConfig {
         entityManagerFactory.setJpaProperties(jpaProperties);
         entityManagerFactory.setDataSource(dataSource());
         entityManagerFactory.setJpaVendorAdapter(hibernateJpaVendorAdapter());
-        entityManagerFactory.setPackagesToScan("com.example.springdata.jpasimple");
+        entityManagerFactory.setPackagesToScan("com.example.springjpa.jpasimple");
 
         return entityManagerFactory;
     }

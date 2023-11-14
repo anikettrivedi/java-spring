@@ -19,10 +19,10 @@ import java.util.Set;
 @Getter
 @Setter
 @NoArgsConstructor
+@ToString (exclude = "items")
 public class Cart {
 
 	@Id
-	@GeneratedValue(strategy= GenerationType.IDENTITY)
 	@Column(name="cart_id")
 	private long id;
 	

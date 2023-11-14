@@ -1,5 +1,6 @@
 package com.example.springjpa.jpaonetomany;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -35,8 +36,8 @@ public class CartItem {
 	@Column(name="quantity")
 	private int quantity;
 	
-	@ManyToOne
-	@JoinColumn(name="cart_id", nullable=false)
+	@ManyToOne (cascade = CascadeType.MERGE)
+	@JoinColumn(name="cart_id")
 	private Cart cart;
 
 	public CartItem(String itemId, double total, int qty, Cart cart){
